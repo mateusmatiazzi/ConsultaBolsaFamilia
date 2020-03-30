@@ -7,11 +7,12 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 class BolsafamiliaApplicationTests {
 
 	@Test
-	public void consumidorAPI() {
+	public void clienteApiTeste() {
 			RestTemplate template = new RestTemplate();
 
 			UriComponents uri = UriComponentsBuilder.newInstance()
@@ -24,7 +25,7 @@ class BolsafamiliaApplicationTests {
 					.build();
 
 			DadosPorMunicipio[] resposta = template.getForObject(uri.toUriString(), DadosPorMunicipio[].class);
-
+			assertThat(template.getForObject(uri.toUriString(), String.class)).contains(resposta[0].getDataReferencia());
 		}
 
 }
