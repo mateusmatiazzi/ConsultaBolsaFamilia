@@ -24,7 +24,6 @@ class BolsafamiliaApplicationTests {
 					.build();
 
 			DadosPorMunicipio[] resposta = template.getForObject(uri.toUriString(), DadosPorMunicipio[].class);
-			System.out.println(resposta[0].getResultado());
 
 		}
 
