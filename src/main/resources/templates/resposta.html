@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta dos dados da bolsa familía por município</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Consulta dos dados da bolsa familía por município</h1>
+<p th:text="${dadosPorMunicipio.getResultado()}"/>
+<p>Para realisar uma nova presquisa basta clicar <a href="http://localhost:8080/pesquisa">(Pesquisar)</a></p>
+</body>
+</html>

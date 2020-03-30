@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Consulta dos dados da bolsa familía por município</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<h1> Consulta dos dados da bolsa familía por municipio</h1>
+<form action="#" th:action="@{/pesquisa}" th:object="${dadosDePesquisa}" method="post">
+    <p>Ano e Mês de referência (AAAAMM): <input type="text" th:field="*{mesAno}" /></p>
+    <p>Código IBGE: <input type="text" th:field="*{codigoIbge}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+
+<h2>Exemplos de códigos de municípios:</h2>
+<ul>
+    <li>São Paulo - 3550308</li>
+    <li>Campo Grande - 2701506</li>
+    <li>Rio de Janeiro - 3304557</li>
+    <li>Vitória - 3205309</li>
+    <li>Cuiabá - 5103403</li>
+</ul>
+</body>
+</html>

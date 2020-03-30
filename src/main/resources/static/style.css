@@ -1,0 +1,10 @@
+@charset "UFT-8";
+
+p{
+    text-align: justify;
+    text-indent: 10px;
+}
+
+body {
+    background-color: #CDC7BB;
+}
